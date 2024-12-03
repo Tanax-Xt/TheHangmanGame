@@ -13,5 +13,5 @@ docker build -t hangman-game .
 ```
 3. Запустите контейнер с образом
 ```bash
-docker run hangman-game
+docker run -it hangman-game
 ```
