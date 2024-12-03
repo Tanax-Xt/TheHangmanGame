@@ -38,8 +38,8 @@ public class ConsolePlay {
                     session.setCurrentTries(session.getCurrentTries() + 1);
                 }
             }
-
-            System.out.println("Вы не угадали слово :(" + "\n" + "Не расстраивайтесь, повезет в следующий раз!");
+            if (session.getCurrentTries() == session.getMaxTries())
+                System.out.println("Вы не угадали слово :(" + "\n" + "Не расстраивайтесь, повезет в следующий раз!");
         } catch (NoSuchElementException e) {
             System.out.println("Мдаааа.... Жаль, что не доиграли. До свидания!");
         } finally {
