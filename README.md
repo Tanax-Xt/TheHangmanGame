@@ -5,13 +5,13 @@
 # Для старта
 1. Склонируйте репозиторий
 ```bash
-git clone https://github.com/Tanax-Xt/TheGallowsGame.git
+git clone https://github.com/Tanax-Xt/TheHangmanGame.git
 ```
 2. Соберите докер-образ
 ```bash
-docker build -t gallows-game .
+docker build -t hangman-game .
 ```
 3. Запустите контейнер с образом
 ```bash
-docker run gallows-game
+docker run hangman-game
 ```
