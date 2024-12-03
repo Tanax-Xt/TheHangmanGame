@@ -11,6 +11,7 @@ public class Main {
 //        word.openLetters('g');
 //        System.out.println(word.getWord());
         Session session = new Session();
+        System.out.println(session.isUsed('d'));
         System.out.println(session.getWord());
     }
 }
