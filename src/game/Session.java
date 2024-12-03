@@ -15,9 +15,6 @@ public class Session {
     private final HiddenWord word = new HiddenWord(getRandomWord());
     private final HashSet<Character> usedLetters = new HashSet<>();
 
-    public Session() {
-    }
-
     private String getRandomWord() {
         List<String> wordsList;
         try {
@@ -35,8 +32,18 @@ public class Session {
         return usedLetters.contains(letter);
     }
 
-    public void addLetter(Character letter) {
+    private void addLetter(Character letter) {
         usedLetters.add(letter);
+    }
+
+    public boolean updateWord(Character letter) {
+        this.word.openLetters(letter);
+        this.addLetter(letter);
+        return this.word.isInWord(letter);
+    }
+
+    public boolean isWordHidden() {
+        return this.word.isHidden();
     }
 
     public String getWord() {
