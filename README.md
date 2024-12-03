@@ -11,7 +11,7 @@ git clone https://github.com/Tanax-Xt/TheGallowsGame.git
 ```bash
 docker build -t gallows-game .
 ```
-3. Запустите докер-образ
+3. Запустите контейнер с образом
 ```bash
 docker run gallows-game
 ```
