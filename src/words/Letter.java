@@ -14,7 +14,11 @@ class Letter {
     }
 
     public boolean equals(Character obj) {
-        return letter == obj;
+        return this.letter.equals(obj);
+    }
+
+    protected boolean isHidden() {
+        return isHidden;
     }
 
     protected void setHidden(boolean isHidden) {
