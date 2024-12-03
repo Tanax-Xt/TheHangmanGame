@@ -13,4 +13,12 @@ public class HiddenWord extends Word{
             }
         }
     }
+
+    public boolean isHidden() {
+        for (Letter l : this.getCharactersList()) {
+            if (l.isHidden())
+                return true;
+        }
+        return false;
+    }
 }
