@@ -1,5 +1,4 @@
 import game.Session;
-import words.HiddenWord;
 
 public class Main {
     public static void main(String[] args) {
