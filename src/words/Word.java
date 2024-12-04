@@ -12,11 +12,11 @@ class Word {
     }
 
     public String getWord() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (Letter l : this.charactersList) {
-            result += l.printLetter();
+            result.append(l.printLetter());
         }
-        return result;
+        return result.toString();
     }
 
     public boolean isInWord(Character letter) {
