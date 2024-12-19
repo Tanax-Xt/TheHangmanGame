@@ -10,10 +10,15 @@ import java.util.List;
 import java.util.Random;
 
 public class Session {
-    private final int maxTries = 6;
+    private final int maxTries;
     private int currentTries = 0;
     private final HiddenWord word = new HiddenWord(getRandomWord());
     private final HashSet<Character> usedLetters = new HashSet<>();
+    private final Random random = new Random();
+
+    public Session(int maxTries) {
+        this.maxTries = maxTries;
+    }
 
     private String getRandomWord() {
         List<String> wordsList;
@@ -23,7 +28,6 @@ public class Session {
             e.printStackTrace();
             return "error";
         }
-        Random random = new Random();
         int index = random.nextInt(wordsList.size());
         return wordsList.get(index);
     }
@@ -56,6 +60,10 @@ public class Session {
 
     public void setCurrentTries(int currentTries) {
         this.currentTries = currentTries;
+    }
+
+    public void addTry() {
+        this.currentTries++;
     }
 
     public int getMaxTries() {
