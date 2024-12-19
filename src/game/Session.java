@@ -58,6 +58,10 @@ public class Session {
         this.currentTries = currentTries;
     }
 
+    public void addTry() {
+        this.currentTries++;
+    }
+
     public int getMaxTries() {
         return maxTries;
     }

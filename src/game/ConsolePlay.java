@@ -23,7 +23,7 @@ public class ConsolePlay {
                 String input = scanner.nextLine();
                 if (input.length() != 1) {
                     System.out.println("Введите только одну букву! А пока минус попытка :)");
-                    session.setCurrentTries(session.getCurrentTries() + 1);
+                    session.addTry();
                     continue;
                 }
                 Character letter = input.toLowerCase().charAt(0);
@@ -35,7 +35,7 @@ public class ConsolePlay {
                     System.out.println("Вы угадали букву!");
                 } else {
                     System.out.println("Такой буквы нет в слове. Попытка сгорает!");
-                    session.setCurrentTries(session.getCurrentTries() + 1);
+                    session.addTry();
                 }
             }
             if (session.getCurrentTries() == session.getMaxTries())
