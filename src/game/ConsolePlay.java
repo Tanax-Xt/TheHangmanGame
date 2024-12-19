@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class ConsolePlay {
-    private final Session session = new Session();
+    private final Session session = new Session(6);
 
     public void run() {
         Scanner scanner = new Scanner(System.in);
