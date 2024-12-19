@@ -5,7 +5,7 @@ import java.util.ArrayList;
 class Word {
     private final ArrayList<Letter> charactersList = new ArrayList<>();
 
-    Word(String word, boolean isHidden) {
+    protected Word(String word, boolean isHidden) {
         for (char l : word.toCharArray()) {
             charactersList.add(new Letter((Character) l, isHidden));
         }
